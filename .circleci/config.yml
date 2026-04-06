@@ -35,7 +35,7 @@ workflows:
 jobs:
   validate:
     docker:
-      - image: cimg/base:2019.08
+      - image: cimg/base:2019.08@sha256:c4cf430d5dea08980b39df0eb9955dd53c744bd8c20a33919f891b76147402e5
     working_directory: ~/repo
     steps:
       - checkout
@@ -43,7 +43,7 @@ jobs:
       - pack-and-validate
   test:
     docker:
-      - image: cimg/base:2019.08
+      - image: cimg/base:2019.08@sha256:c4cf430d5dea08980b39df0eb9955dd53c744bd8c20a33919f891b76147402e5
     working_directory: ~/repo
     steps:
       - checkout
@@ -81,7 +81,7 @@ jobs:
 
   publish:
     docker:
-      - image: cimg/base:2019.08
+      - image: cimg/base:2019.08@sha256:c4cf430d5dea08980b39df0eb9955dd53c744bd8c20a33919f891b76147402e5
     working_directory: ~/repo
     steps:
       - checkout
